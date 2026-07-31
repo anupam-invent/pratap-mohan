@@ -6,10 +6,13 @@ import { useState, type ReactNode } from "react";
 import {
   BarChart3,
   BookOpen,
+  Camera,
   ChevronDown,
   CircleCheck,
+  Mail,
   Menu,
   Scale,
+  Send,
   ShieldCheck,
   X,
   type LucideIcon,
@@ -35,6 +38,12 @@ const navItems: NavItem[] = [
   { label: "Mentorship", href: "/mentorship" },
   { label: "Prop Firms", href: "/prop-firms" },
   { label: "Brokers", href: "/brokers" },
+];
+
+const footerSocialLinks = [
+  { name: "Telegram", href: "https://t.me/mpratapmohanliv", icon: Send, ready: true },
+  { name: "Instagram", href: "#", icon: Camera, ready: false },
+  { name: "Gmail", href: "mailto:your@email.com", icon: Mail, ready: true },
 ];
 
 function SelectableCard<T extends BaseCardItem>({
@@ -148,7 +157,7 @@ export function Header() {
 export function Footer() {
   return (
     <footer className="border-t border-line bg-[#060d18]">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 md:grid-cols-[1.5fr_1fr_1fr]">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 md:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
         <div>
           <div className="mb-3 font-semibold text-white">
             PRATAP<span className="text-signal">MOHAN</span>
@@ -173,9 +182,26 @@ export function Footer() {
             <Link href="/privacy">Privacy policy</Link>
           </div>
         </div>
+        <div>
+          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-slate-500">Contact Me</p>
+          <div className="grid gap-2 text-sm text-slate-400">
+            {footerSocialLinks.map(({ name, href, icon: Icon, ready }) => (
+              <a
+                key={name}
+                href={href}
+                target={ready ? "_blank" : undefined}
+                rel={ready ? "noopener noreferrer" : undefined}
+                className={`flex items-center gap-2 text-slate-400 transition hover:text-white ${ready ? "" : "cursor-default opacity-70"}`}
+              >
+                <Icon size={14} className="shrink-0" />
+                <span>{name}</span>
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
       <div className="border-t border-line px-5 py-5 text-center text-xs text-slate-500">
-        © 2026 Pratap Mohan. Educational content only. Not financial advice.
+        © 2026 Pratap Mohan. All rights reserved by ⚡ ANUPAM CHAKRABORTY ⚡
       </div>
     </footer>
   );

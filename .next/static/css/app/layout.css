@@ -624,6 +624,14 @@ video {
   width: 3rem;
   height: 3rem;
 }
+.size-8 {
+  width: 2rem;
+  height: 2rem;
+}
+.size-7 {
+  width: 1.75rem;
+  height: 1.75rem;
+}
 .h-48 {
   height: 12rem;
 }
@@ -704,6 +712,9 @@ video {
 .list-none {
   list-style-type: none;
 }
+.list-disc {
+  list-style-type: disc;
+}
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -746,6 +757,9 @@ video {
 .gap-6 {
   gap: 1.5rem;
 }
+.gap-2\.5 {
+  gap: 0.625rem;
+}
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
@@ -755,6 +769,11 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 .divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
@@ -785,6 +804,9 @@ video {
 }
 .rounded-xl {
   border-radius: 0.75rem;
+}
+.rounded-md {
+  border-radius: 0.375rem;
 }
 .border {
   border-width: 1px;
@@ -818,6 +840,9 @@ video {
 }
 .border-white\/10 {
   border-color: rgb(255 255 255 / 0.1);
+}
+.border-white\/\[\.06\] {
+  border-color: rgb(255 255 255 / .06);
 }
 .bg-\[\#060d18\] {
   --tw-bg-opacity: 1;
@@ -868,6 +893,9 @@ video {
 }
 .bg-white\/\[\.06\] {
   background-color: rgb(255 255 255 / .06);
+}
+.bg-white\/\[\.03\] {
+  background-color: rgb(255 255 255 / .03);
 }
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
@@ -983,6 +1011,10 @@ video {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
+.px-2\.5 {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
 .pb-20 {
   padding-bottom: 5rem;
 }
@@ -994,6 +1026,9 @@ video {
 }
 .pt-5 {
   padding-top: 1.25rem;
+}
+.pl-6 {
+  padding-left: 1.5rem;
 }
 .text-center {
   text-align: center;
@@ -1039,6 +1074,9 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+.text-\[13px\] {
+  font-size: 13px;
 }
 .font-bold {
   font-weight: 700;
@@ -1306,9 +1344,17 @@ a {
   background-color: rgb(123 241 208 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-white\/\[\.05\]:hover {
+  background-color: rgb(255 255 255 / .05);
+}
+
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 .group[open] .group-open\:rotate-180 {
@@ -1381,6 +1427,10 @@ a {
 
   .md\:grid-cols-\[1\.5fr_1fr_1fr\] {
     grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  .md\:grid-cols-\[1\.2fr_0\.8fr_0\.8fr_1fr\] {
+    grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr;
   }
 }
 
