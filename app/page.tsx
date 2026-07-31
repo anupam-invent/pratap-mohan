@@ -30,7 +30,9 @@ export default function Home() {
           </div>
           <div className="relative mx-auto flex min-h-[430px] w-full max-w-md items-end justify-center overflow-hidden rounded-3xl border border-line bg-gradient-to-b from-electric/15 via-panel to-ink shadow-glow">
             <div className="absolute inset-x-12 bottom-0 h-48 rounded-full bg-signal/15 blur-3xl" />
-            <Image src="/images/trader-portrait.png" alt="Professional trader portrait" width={500} height={500} priority className="hero-float relative z-10 h-auto w-full max-w-[440px] object-contain object-bottom" />
+            <div className="hero-float relative z-10 w-full max-w-[440px]">
+              <Image src="/images/trader-portrait.png" alt="Professional trader portrait" width={500} height={500} priority className="h-auto w-full object-contain object-bottom" />
+            </div>
           </div>
         </div>
       </section>
