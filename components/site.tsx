@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState, type ReactNode } from "react";
 import {
@@ -99,7 +100,14 @@ export function Header() {
     <header className="sticky top-0 z-30 border-b border-line/80 bg-ink/85 backdrop-blur-xl">
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5">
         <Link href="/" className="flex items-center gap-2" onClick={closeMenu}>
-          <span className="grid size-8 place-items-center rounded-lg bg-signal text-sm font-black text-ink">PM</span>
+          <Image
+            src="/images/logo.png"
+            alt="Pratap Mohan logo"
+            width={120}
+            height={40}
+            className="h-8 w-auto object-contain"
+            priority
+          />
           <span className="font-semibold tracking-tight text-white">
             PRATAP<span className="text-signal">MOHAN</span>
           </span>
