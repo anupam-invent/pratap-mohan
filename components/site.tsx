@@ -41,7 +41,7 @@ export function PartnerCard({ firm, selected = false, onSelect }: { firm: typeof
   return <article onClick={onSelect} className={`relative cursor-pointer rounded-2xl border p-4 transition duration-200 ${selected ? "border-signal bg-panel shadow-[0_18px_36px_rgba(69,224,180,.12)]" : "border-line bg-panel/70 hover:-translate-y-1 hover:border-signal/60"}`}>
     {selected && <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-signal px-5 py-1 text-[10px] font-bold tracking-[.12em] text-ink">RECOMMENDED</span>}
     <div className="px-1 pt-2"><p className="text-[10px] font-bold uppercase tracking-[.14em] text-slate-500">Prop firm</p><p className="mt-1 text-2xl font-bold text-white">{firm.name}</p></div>
-    <a href={firm.referralUrl} onClick={(event) => event.stopPropagation()} className={`mt-4 block w-full rounded-xl py-3 text-center text-sm font-bold transition ${selected ? "bg-signal text-ink hover:bg-[#7bf1d0]" : "bg-electric text-white hover:bg-[#759eff]"}`}>Buy Challenge</a>
+    <a href={firm.referralUrl} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()} className={`mt-4 block w-full rounded-xl py-3 text-center text-sm font-bold transition ${selected ? "bg-signal text-ink hover:bg-[#7bf1d0]" : "bg-electric text-white hover:bg-[#759eff]"}`}>Buy Challenge</a>
     <div className="mt-3 rounded-xl bg-white/[.05] px-3 py-3 text-white">{rows.map(([label, value], index) => <div key={label} className={`flex items-center justify-between py-2 text-xs ${index ? "border-t border-white/10" : ""}`}><span className="font-bold">{label}</span><span className="font-bold">{value}</span></div>)}</div>
   </article>;
 }
@@ -57,7 +57,7 @@ export function BrokerCard({ broker, selected = false, onSelect }: { broker: typ
   return <article onClick={onSelect} className={`relative cursor-pointer rounded-2xl border p-4 transition duration-200 ${selected ? "border-signal bg-panel shadow-[0_18px_36px_rgba(69,224,180,.12)]" : "border-line bg-panel/70 hover:-translate-y-1 hover:border-signal/60"}`}>
     {selected && <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-signal px-5 py-1 text-[10px] font-bold tracking-[.12em] text-ink">RECOMMENDED</span>}
     <div className="px-1 pt-2"><p className="text-[10px] font-bold uppercase tracking-[.14em] text-slate-500">Broker</p><p className="mt-1 text-2xl font-bold text-white">{broker.name}</p></div>
-    <a href={broker.referralUrl} onClick={(event) => event.stopPropagation()} className={`mt-4 block w-full rounded-xl py-3 text-center text-sm font-bold transition ${selected ? "bg-signal text-ink hover:bg-[#7bf1d0]" : "bg-electric text-white hover:bg-[#759eff]"}`}>Sign Up</a>
+    <a href={broker.referralUrl} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()} className={`mt-4 block w-full rounded-xl py-3 text-center text-sm font-bold transition ${selected ? "bg-signal text-ink hover:bg-[#7bf1d0]" : "bg-electric text-white hover:bg-[#759eff]"}`}>Sign Up</a>
     <div className="mt-3 rounded-xl bg-white/[.05] px-3 py-3 text-white">{rows.map(([label, value], index) => <div key={label} className={`flex items-center justify-between gap-4 py-2 text-xs ${index ? "border-t border-white/10" : ""}`}><span className="font-bold">{label}</span><span className="text-right font-bold text-slate-300">{value}</span></div>)}</div>
   </article>;
 }
