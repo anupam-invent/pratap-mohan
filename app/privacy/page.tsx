@@ -1,0 +1,2 @@
+import { LegalPage } from "@/components/site";
+export default function Privacy() { return <LegalPage title="Privacy policy"><p>This placeholder privacy policy should be reviewed and customized before launch. It should explain what personal information is collected, why it is collected, where it is stored, and how visitors can request access or deletion.</p><p>If you add contact forms, analytics, newsletters, or advertising pixels, list those services and their relevant privacy controls here. Include a contact email for privacy enquiries.</p></LegalPage>; }

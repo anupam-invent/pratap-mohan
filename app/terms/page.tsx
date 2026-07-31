@@ -1,0 +1,2 @@
+import { LegalPage } from "@/components/site";
+export default function Terms() { return <LegalPage title="Terms & conditions"><p>This website is provided for general information and educational purposes. Your use of it is subject to these terms and all applicable laws.</p><p>Before publishing, have these terms reviewed for your location, services, and any paid products or community features you add.</p></LegalPage>; }

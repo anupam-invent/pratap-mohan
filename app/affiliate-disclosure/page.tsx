@@ -1,0 +1,2 @@
+import { LegalPage } from "@/components/site";
+export default function AffiliateDisclosure() { return <LegalPage title="Affiliate disclosure"><p>Some links on this website may be affiliate links. If you use a qualifying link to sign up or purchase a product, Apex Edge may receive a commission at no additional cost to you.</p><p>Affiliate relationships do not replace your responsibility to research a provider, confirm local eligibility, or read its current terms. Any opinion is editorial and should be treated as a starting point for your own due diligence.</p></LegalPage>; }
