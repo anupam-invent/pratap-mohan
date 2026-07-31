@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: { default: "Pratap Mohan", template: "%s | Pratap Mohan" },
   description: "Learn market structure, liquidity concepts, disciplined risk management, and practical trading education.",
   keywords: ["trading", "prop firms", "brokers", "risk management", "trader portfolio"],
+  icons: {
+    icon: [{ url: "/images/favicon.ico", sizes: "any" }],
+  },
   openGraph: { title: "Pratap Mohan", description: "Markets, risk, and disciplined execution.", type: "website" },
 };
 
